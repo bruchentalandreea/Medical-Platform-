@@ -1,0 +1,41 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3.7'
+
+# Define services
+services:
+  mysql:
+       container_name: mysql-development-2
+       image: mysql:5.7
+       environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: medication_platform_final
+       ports:
+       - 3308:3308
+  #App backend service
+  app-server:
+    # Configuration for building the docker image for the backend service
+    build:
+      context: spring-boot-demo # Use an image built from the specified dockerfile in the `spring-boot-demo` directory.
+      dockerfile: docker-file
+    ports:
+        #"HOST:CONTAINTER"
+      - "8082:8082" # Forward the exposed port 8080 on the container to port 8080 on the hostmachine
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/medication_platform_final?autoReconnect=true&useSSL=false
+    depends_on: 
+      - mysql # This service depends on mysql. Start that first.
+
+ # Frontend Service 
+  app-client:
+    build:
+      context: a1_frontend # Use an image built from the specified dockerfile in the `a1_frontend` directory.
+      dockerfile: docker-file
+      args:
+        REACT_APP_API_BASE_URL: http://127.0.0.1:8080/api
+    ports:
+         #"HOST:CONTAINTER"
+       - "3001:3000"
+    depends_on:
+      - app-server #waits for the app-server to start
+

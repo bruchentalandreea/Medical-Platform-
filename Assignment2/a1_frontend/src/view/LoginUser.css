@@ -1,0 +1,57 @@
+body {
+    background-image: url("med.jpg");
+    background-color: #000000;
+   }
+
+
+.container2{
+    background-color : #F7FFF0;
+    opacity: 0.8;
+}
+
+.col-sm-6{
+  
+    margin : 0px;
+    opacity: 0.80;
+    width: 1349px;
+    height: 444px;
+    background-color : #F7FFF0;
+}
+
+
+.info {
+    width: 300px;
+    
+}
+
+.jumbotron
+{
+    background-color : #F7FFF0;
+    width : 450px;
+}
+
+.form-group
+{
+    margin-left: 15px;
+    opacity : none
+}
+
+.id1
+{
+    margin-left: 80px;
+}
+.btn1
+{
+    margin-left : 85px;
+    margin-top : 20px;
+    background-color: #014421; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+   

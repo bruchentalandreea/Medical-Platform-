@@ -1,0 +1,54 @@
+
+.btn3
+{
+
+    margin-top : 20px;
+    background-color: #014421; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left : 0px;
+    width: 60%;
+
+} 
+.btn-group
+{
+    display : contents; 
+}
+
+.col-sm-6
+{
+    margin-top:  70px;
+    margin-left: 450px;
+    opacity: 0.90;
+}
+
+h2{
+    margin-left : 0px;
+    opacity : 1.0;
+
+}
+
+.info {
+    width: 300px;
+    
+}
+
+.jumbotron
+{
+    
+    width : 450px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-group
+{
+    margin-left: 45px;
+    opacity : none
+}
+

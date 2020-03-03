@@ -1,0 +1,39 @@
+
+
+.btn-group
+{
+    display : contents; 
+}
+
+.col-sm-6
+{
+    margin-top:  70px;
+    margin-left: 450px;
+    opacity: 0.90;
+}
+
+h2{
+    margin-left : 0px;
+    opacity : 1.0;
+
+}
+
+.info {
+    width: 300px;
+    
+}
+
+.jumbotron
+{
+    
+    width : 450px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.form-group
+{
+    margin-left: 45px;
+    opacity : none
+}
+
